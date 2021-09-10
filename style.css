@@ -1,0 +1,590 @@
+/*version de lucas */
+/* 21:16 */
+
+
+
+@font-face {
+    font-family: Good Mood;
+    src: url(font/good_mood/Good\ Mood.ttf);
+}
+
+html {
+    max-width: 1440px;
+    margin: auto;
+}
+
+body {
+    background-image: url(img/BG-image.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+
+
+    /* empêcher le scroll de la page */
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* width: 100%; */
+    /* height: 100vh; */
+
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    background-color: #262626;
+    font-size: 1.5vh;
+    max-width: 1440px;
+    margin: auto;
+
+}
+
+p {
+    /* font-size: 2.5vh; */
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    padding: 0vh;
+}
+
+a {
+    text-decoration: none;
+    color: none;
+}
+
+a:hover {
+    color: white;
+}
+
+
+h1 {
+    font-family: 'Good Mood', Arial, Helvetica, sans-serif;
+}
+
+/* diaporama home */
+
+#bg-header {
+    position: absolute;
+
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat url("img/bg-header.png") -500px;
+    animation: defile 10s alternate infinite;
+    opacity: 0.5;
+    filter: alpha(opacity=0.2);
+    z-index: -2;
+}
+
+/*Animation home Yamina*/
+@keyframes defile {
+    0% {
+        background-position-x: -300vw;
+    }
+
+    100% {
+        background-position-x: 100vw;
+    }
+}
+
+
+/* Section */
+#a-propos {
+    height: 100vh;
+}
+
+#home {
+    height: 100vh;
+}
+
+#menu {
+    z-index: 120000;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+/* Eléments spécifiques */
+.logo {
+    height: 25vh;
+    width: 25vh;
+}
+
+.logo-mini {
+    height: 14vh;
+}
+
+.icon {
+    height: 4.3vh;
+    width: 4.3vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.logos-group {
+    margin: auto;
+    display: flex;
+    margin-top: 2vh;
+}
+
+
+
+/* Boutton classique (comme dans le home) */
+.button {
+    height: 7.5vh;
+    width: 20vh;
+    border: none;
+    outline: 1px white solid;
+    outline-offset: -1vh;
+    transform: rotate(4deg);
+    color: white;
+    font-family: Good Mood;
+    font-size: 4vh;
+    margin: auto;
+    display: block;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding-top: 6px;
+}
+
+/* Boutton redressé avec shadow */
+.button-mobile {
+    height: 7.5vh;
+    width: 17vh;
+    border: none;
+    outline: 1px white solid;
+    outline-offset: -1vh;
+    color: white;
+    font-family: Good Mood;
+    font-size: 4vh;
+    margin: auto;
+    display: block;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    box-shadow: rgba(0, 0, 0, 70%) 3px 3px 3px;
+    padding-top: 6px;
+
+}
+
+.btn-blue {
+    background-color: #514ab4;
+}
+
+.btn-yellow {
+    background-color: #DDB90D;
+}
+
+.btn-orange {
+    background-color: #BC3718;
+}
+
+/* Boutton couleur inversé */
+.button-dark {
+    height: 7.5vh;
+    width: 17vh;
+    border: none;
+    font-family: Good Mood;
+    font-size: 4vh;
+    margin: none;
+    display: block;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    transform: rotate(4deg);
+    padding-top: 6px;
+
+}
+
+.dark-red {
+    outline: 1px solid #bc3718;
+    outline-offset: -1vh;
+    color: #bc3718;
+    background-color: #3c3c3c;
+}
+
+.dark-yellow {
+    outline: 1px solid #ddb90d;
+    outline-offset: -1vh;
+    color: #ddb90d;
+    background-color: #3c3c3c;
+}
+
+.dark-blue {
+    outline: 1px solid #746aff;
+    outline-offset: -1vh;
+    color: #746aff;
+    background-color: #3c3c3c;
+}
+
+/* Le pannier */
+.btn-panier {
+    height: 65px;
+    width: 65px;
+    border-radius: 100%;
+    background-color: #BC3718;
+    box-shadow: black 3px 3px 3px;
+    position: relative;
+}
+
+.btn-panier-flottant {
+    height: 65px;
+    width: 65px;
+    border-radius: 100%;
+    background-color: #BC3718;
+    box-shadow: black 3px 3px 3px;
+    margin-bottom: 81px;
+    z-index: 10000;
+}
+
+.icon-panier {
+    height: 32px;
+    position: absolute;
+    top: 8px;
+    left: 7px;
+}
+
+.icon-big {
+    height: 6vh;
+    width: 6vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.nombre-panier {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: white;
+    border: solid #BC3718 4px;
+    position: absolute;
+    top: 17px;
+    left: 40px;
+    color: #bc3718;
+    box-shadow: black 3px 3px 3px;
+}
+
+#panier {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    z-index: 100000;
+}
+
+.choix-x {
+    /* width: 80%;
+    height: 40px; */
+    background-color: rgba(196, 196, 196, 0.31);
+    border: solid #514ab4 2px;
+    color: #f3d4a9;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.prix-choix {
+    color: black;
+}
+
+.cadre-prix {
+    width: 40%;
+    height: 40px;
+    background-color: white;
+    border: solid #BC3718 4px;
+    border-radius: 22px;
+    color: #373737;
+    margin-top: 26px;
+    /* margin-left: 276px; */
+    font-size: 22px;
+    max-width: 200px;
+    margin-left: 40px;
+}
+
+.ligne-prix {
+    width: 80%;
+}
+
+.btn-commander {
+    background-color: #d88e35;
+    border: solid #f3d4a9 1px;
+    font-size: 30px;
+    font-family: Good Mood;
+    color: #f3d4a9;
+    border-radius: 22px;
+    width: 70%;
+    height: 40px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.mon-panier {
+    vertical-align: middle;
+    color: white;
+    font-family: Good Mood;
+    font-size: 3vh;
+}
+
+.mon-panier-panier {
+    vertical-align: middle;
+    color: white;
+    font-family: Good Mood;
+    font-size: 5vh;
+    margin-right: 10px;
+}
+
+/* Fin le panier */
+
+
+/* Dans à propos */
+.light {
+    font-family: Rubik light;
+}
+
+.photo-salle {
+    height: 45vh;
+    margin: auto;
+    display: flex;
+    max-width: fit-content;
+}
+
+.text-article {
+    font-size: 2.3vh;
+}
+
+.line {
+    height: 4px;
+    width: 45px;
+    background-color: #DDB90D;
+    margin: auto;
+    margin-top: 3vh;
+    display: flex;
+}
+
+.valeur-nb-panier-2 {
+    font-size: 22px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.valeur-nb-panier {
+    font-size: 22px;
+    vertical-align: middle;
+    margin-left: 0px;
+}
+
+.center {
+    display: flex;
+    margin: auto;
+}
+
+/* menu accordéon */
+
+#menu-carte {
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 375px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#menu-carte::-webkit-scrollbar {
+    display: none;
+}
+
+
+.menu-item {
+    border: #9EDFFD 7px;
+}
+
+.accordion-item {
+    background: none;
+    border: none;
+}
+
+button.accordion-button {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+
+button.accordion-button h1 {
+    margin-left: auto;
+    margin-right: auto;
+    color: #C6A610;
+    font-size: 36px;
+}
+
+.accordion-button::after {
+    position: absolute;
+    right: 10px;
+}
+
+.burger-menu {
+    border: 7px solid #9EDFFD;
+    border-radius: 43px;
+    max-width: 346px;
+    max-height: 584px;
+
+}
+
+.burger-menu.active img {
+    max-width: 240px;
+    max-height: 195px;
+}
+
+/* pour enlever la fleche quand le menu est fermé */
+
+.accordion-button:not(.collapsed) {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* la croix pour fermer le menu */
+
+button.accordion-button:not(.collapsed)::after {
+    background-image: url(img/close_white_36dp.svg);
+}
+
+
+/* le petit trait en dessous des menus accordéons */
+
+.spacer {
+    width: 42px;
+    border: 5px solid #514AB4;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Espace contact */
+
+.map-section iframe {
+    border-radius: 25px;
+}
+
+.btn-inside {
+    /* margin-left: -150px;
+      margin-top: -50px; */
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: #5491f5;
+    font-weight: 400;
+}
+
+#form-section {
+    min-width: 380px;
+    max-width: 600px;
+    background-color: #DADCE0;
+    border-radius: 25px;
+    text-align: center;
+    min-height: 300px;
+    max-height: 500px;
+}
+
+#form-name {
+    width: 85%;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+#form-mail {
+    width: 85%;
+    margin: 15px auto;
+    font-size: 18px;
+}
+
+#form-message {
+    width: 85%;
+    margin-bottom: 50px;
+    font-size: 18px;
+    height: 6em;
+}
+
+#form-btn {
+    margin-top: -50px;
+    margin-left: 70%;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: #5491f5;
+    font-weight: 400;
+}
+
+.facebook img {
+    width: 50px;
+    height: 50px;
+}
+
+.facebook a {
+    text-decoration: underline;
+    color: #ffffff;
+
+}
+
+.facebook,
+.adress {
+    text-align: center;
+}
+
+#contact {
+    height: 100vh;
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 1024px) {
+
+    /* #home{
+         display: none;
+     } */
+    /* .button-mobile{
+         margin: auto;
+     } */
+    .carousel-item {
+        position: relative;
+        display: block;
+        float: left;
+        width: 100%;
+        margin-right: -0;
+        backface-visibility: hidden;
+        transition: inherit;
+        margin-right: 20px;
+    }
+
+    .carousel-item img {
+        margin: 10px 10px;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+
+
+    .accordion-collapse {
+        position: absolute;
+        background: #262626;
+        z-index: 1;
+        width: 100vw;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 1024) {
+    .frise-menu-desktop {
+        /* background: url(img/frise.png); */
+        display: flex;
+        max-width: 750px;
+        height: 511;
+        margin-bottom: 100px;
+
+    }
+
+    #collapseThree {
+        width: 90vW;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+
+    .carousel-item {
+        display: block;
+    }
+
+}
+
+
+/* Bon le css est un peu long pour du bootstrap peut être */
